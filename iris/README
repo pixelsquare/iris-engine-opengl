@@ -1,0 +1,29 @@
+*** IRIS ENGINE ***
+
+* CHANGELOG *
+
+** 10/22/2017 **
+- Added standard shader
+- Added unlit shader
+- Fixed texture demo scene
+- Fixed lighting demo scene
+
+* UPDATES *
+- RenderTarget: Mirror Effect
+- RenderTarget: Reflection Effect
+- RenderTarget: Shadow Effect
+- RenderTarget: Blur Effect
+- RenderTarget: Bloom Effect
+- RenderTarget: Stencil Effect
+- Lighting: Directional Light
+- Lighting: Spot Light
+- Particle System
+- Transform Hierarchy
+
+* ADDITIONAL *
+- Fix mesh update sequence in transform updates
+- Fix general code, must be modulated
+- Do some cleanups on drawarrays and glteximage2d crashing
+- Do testbed scenes for all the features
+- Separate shaders to different shader types
+- Add an enumeration for shader types so it can easily be accessed outside the engine

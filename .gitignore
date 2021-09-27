@@ -1,0 +1,17 @@
+# Visual Studio 2015 cache directory
+/.vs/
+*.VC.db
+*.VC.opendb
+
+# Builds
+*.apk
+*.exe
+
+# Exclude everything except the solution file and main
+iris/proj.win32/*
+!iris/proj.win32/*.sln
+!iris/proj.win32/win32
+
+# Exclude build binaries
+iris/iris/vs/Debug.win32
+iris/iris/vs/Release.win32

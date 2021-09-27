@@ -1,0 +1,39 @@
+uniform mat4 u_mvp;
+uniform mat4 u_modelMatrix;
+
+attribute vec3 a_vertPos;
+attribute vec2 a_textCoord;
+attribute vec3 a_fragNormal;
+attribute vec4 a_fragColor;
+
+attribute vec3 a_tangent;
+attribute vec3 a_bitangent;
+
+varying vec3 v_vertPos;
+varying vec2 v_texCoord;
+varying vec3 v_fragNormal;
+varying vec4 v_fragColor;
+
+varying vec3 v_tangent;
+varying vec3 v_bitangent;
+varying mat3 TBN;
+
+void main()
+{
+    v_vertPos = a_vertPos;
+	v_texCoord = a_textCoord;
+	v_fragNormal = a_fragNormal;
+	v_fragColor = a_fragColor;
+	
+	v_tangent = a_tangent;
+	v_bitangent = a_bitangent;
+	
+    gl_Position = u_mvp * vec4(a_vertPos, 1);
+	
+	mat3 modelMatrixView3 = mat3(u_modelMatrix);	
+	vec3 cameraSpaceNormal = modelMatrixView3 * normalize(a_fragNormal);
+	vec3 cameraSpaceTangent = modelMatrixView3 * normalize(a_tangent);
+	vec3 cameraSpaceBitangent = modelMatrixView3 * normalize(a_bitangent);
+	
+	TBN = mat3(cameraSpaceTangent, cameraSpaceBitangent, cameraSpaceNormal);
+}

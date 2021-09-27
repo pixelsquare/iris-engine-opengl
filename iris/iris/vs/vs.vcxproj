@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8D1E3CB5-9DAD-49FE-A2BA-DC7DFA9DE6AD}</ProjectGuid>
+    <RootNamespace>vs</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>libiris</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="iris-debug.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="iris-release.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="iris-debug.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="iris-release.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\AppConfig.h" />
+    <ClInclude Include="..\base\Bundle3D.h" />
+    <ClInclude Include="..\base\Camera.h" />
+    <ClInclude Include="..\base\Color.h" />
+    <ClInclude Include="..\base\Component.h" />
+    <ClInclude Include="..\base\CustomObjectPool.h" />
+    <ClInclude Include="..\base\Data.h" />
+    <ClInclude Include="..\base\Director.h" />
+    <ClInclude Include="..\base\GameObject.h" />
+    <ClInclude Include="..\base\Input.h" />
+    <ClInclude Include="..\base\IStringable.h" />
+    <ClInclude Include="..\base\Light.h" />
+    <ClInclude Include="..\base\Material.h" />
+    <ClInclude Include="..\base\Mesh.h" />
+    <ClInclude Include="..\base\MeshRenderer.h" />
+    <ClInclude Include="..\base\Object.h" />
+    <ClInclude Include="..\base\PooledObject.h" />
+    <ClInclude Include="..\base\PoolManager.h" />
+    <ClInclude Include="..\base\Primitives.h" />
+    <ClInclude Include="..\base\Profiler.h" />
+    <ClInclude Include="..\base\Rect.h" />
+    <ClInclude Include="..\base\Renderer.h" />
+    <ClInclude Include="..\base\RenderTexture.h" />
+    <ClInclude Include="..\base\Scene.h" />
+    <ClInclude Include="..\base\Shader.h" />
+    <ClInclude Include="..\base\ShaderCache.h" />
+    <ClInclude Include="..\base\Size.h" />
+    <ClInclude Include="..\base\Texture2D.h" />
+    <ClInclude Include="..\base\Time.h" />
+    <ClInclude Include="..\base\Transform.h" />
+    <ClInclude Include="..\base\TransformAnchor.h" />
+    <ClInclude Include="..\Iris.h" />
+    <ClInclude Include="..\math\Mathf.h" />
+    <ClInclude Include="..\math\Matrix4x4.h" />
+    <ClInclude Include="..\math\Quaternion.h" />
+    <ClInclude Include="..\math\Vector2f.h" />
+    <ClInclude Include="..\math\Vector3f.h" />
+    <ClInclude Include="..\math\Vector4f.h" />
+    <ClInclude Include="..\platform\android\Application-android.h" />
+    <ClInclude Include="..\platform\android\GL-android.h" />
+    <ClInclude Include="..\platform\android\PlatformDefine-android.h" />
+    <ClInclude Include="..\platform\android\StdC-android.h" />
+    <ClInclude Include="..\platform\Application.h" />
+    <ClInclude Include="..\platform\ApplicationProtocol.h" />
+    <ClInclude Include="..\platform\FileUtility.h" />
+    <ClInclude Include="..\platform\GLView.h" />
+    <ClInclude Include="..\platform\Logger.h" />
+    <ClInclude Include="..\platform\PlatformGL.h" />
+    <ClInclude Include="..\platform\PlatformConfig.h" />
+    <ClInclude Include="..\platform\PlatformDefine.h" />
+    <ClInclude Include="..\platform\PlatformMacros.h" />
+    <ClInclude Include="..\platform\StdC.h" />
+    <ClInclude Include="..\platform\win32\desktop\Application-desktop.h" />
+    <ClInclude Include="..\platform\win32\FileUtility-win32.h" />
+    <ClInclude Include="..\platform\win32\GL-win32.h" />
+    <ClInclude Include="..\platform\win32\GLView-win32.h" />
+    <ClInclude Include="..\platform\win32\PlatformDefine-win32.h" />
+    <ClInclude Include="..\platform\win32\StdC-win32.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\base\Bundle3D.cpp" />
+    <ClCompile Include="..\base\Camera.cpp" />
+    <ClCompile Include="..\base\Color.cpp" />
+    <ClCompile Include="..\base\Component.cpp" />
+    <ClCompile Include="..\base\CustomObjectPool.cpp" />
+    <ClCompile Include="..\base\Data.cpp" />
+    <ClCompile Include="..\base\Director.cpp" />
+    <ClCompile Include="..\base\GameObject.cpp" />
+    <ClCompile Include="..\base\Input.cpp" />
+    <ClCompile Include="..\base\Light.cpp" />
+    <ClCompile Include="..\base\Material.cpp" />
+    <ClCompile Include="..\base\Mesh.cpp" />
+    <ClCompile Include="..\base\MeshRenderer.cpp" />
+    <ClCompile Include="..\base\Object.cpp" />
+    <ClCompile Include="..\base\PooledObject.cpp" />
+    <ClCompile Include="..\base\PoolManager.cpp" />
+    <ClCompile Include="..\base\Primitives.cpp" />
+    <ClCompile Include="..\base\Profiler.cpp" />
+    <ClCompile Include="..\base\Rect.cpp" />
+    <ClCompile Include="..\base\Renderer.cpp" />
+    <ClCompile Include="..\base\RenderTexture.cpp" />
+    <ClCompile Include="..\base\Scene.cpp" />
+    <ClCompile Include="..\base\Shader.cpp" />
+    <ClCompile Include="..\base\ShaderCache.cpp" />
+    <ClCompile Include="..\base\Size.cpp" />
+    <ClCompile Include="..\base\Texture2D.cpp" />
+    <ClCompile Include="..\base\Time.cpp" />
+    <ClCompile Include="..\base\Transform.cpp" />
+    <ClCompile Include="..\base\TransformAnchor.cpp" />
+    <ClCompile Include="..\Iris.cpp" />
+    <ClCompile Include="..\math\Mathf.cpp" />
+    <ClCompile Include="..\math\Matrix4x4.cpp" />
+    <ClCompile Include="..\math\Quaternion.cpp" />
+    <ClCompile Include="..\math\Vector2f.cpp" />
+    <ClCompile Include="..\math\Vector3f.cpp" />
+    <ClCompile Include="..\math\Vector4f.cpp" />
+    <ClCompile Include="..\platform\android\Application-android.cpp" />
+    <ClCompile Include="..\platform\FileUtility.cpp" />
+    <ClCompile Include="..\platform\GLView.cpp" />
+    <ClCompile Include="..\platform\Logger.cpp" />
+    <ClCompile Include="..\platform\win32\desktop\Application-desktop.cpp" />
+    <ClCompile Include="..\platform\win32\FileUtility-win32.cpp" />
+    <ClCompile Include="..\platform\win32\GLView-win32.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

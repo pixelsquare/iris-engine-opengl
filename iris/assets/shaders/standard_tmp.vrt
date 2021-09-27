@@ -1,0 +1,79 @@
+uniform mat4 u_modelMatrix;
+uniform mat4 u_viewMatrix;
+uniform mat4 u_projectionMatrix;
+uniform mat4 u_mvp;
+
+uniform float u_time;
+
+attribute vec3 a_vertexPos;
+attribute vec2 a_texCoord;
+attribute vec4 a_fragColor;
+attribute vec3 a_fragNormal;
+
+attribute vec3 a_tangent;
+attribute vec3 a_bitangent;
+
+struct Material
+{
+    float shininess;
+    vec4 color;
+
+    sampler2D mainTexture;
+    sampler2D specularMap;
+    sampler2D normalMap;
+    sampler2D displacementMap;
+
+}; uniform Material material;
+
+varying vec3 v_vertexPos;
+varying vec2 v_texCoord;
+varying vec4 v_fragColor;
+varying vec3 v_fragNormal;
+
+varying vec3 v_tangent;
+varying vec3 v_bitangent;
+varying mat3 v_tbn;
+
+highp mat3 transpose(highp mat3 p_matrix)
+{
+    highp vec3 v0 = p_matrix[0];
+    highp vec3 v1 = p_matrix[1];
+    highp vec3 v2 = p_matrix[2];
+
+    highp mat3 outMat = mat3(
+        vec3(v0.x, v1.x, v2.x),
+        vec3(v0.y, v1.y, v2.y),
+        vec3(v0.z, v1.z, v2.z)
+    );
+
+    return outMat;
+}
+
+void main()
+{
+    v_vertexPos = a_vertexPos;
+    v_texCoord = a_texCoord;
+    v_fragColor = a_fragColor;
+    v_fragNormal = a_fragNormal;
+
+    v_tangent = a_tangent;
+    v_bitangent = a_bitangent;
+
+    //mat4 mvp = u_viewMatrix * u_projectionMatrix * u_modelMatrix;
+    //gl_Position = mvp * vec4(a_vertexPos, 1.0);
+
+    gl_Position = u_mvp * vec4(a_vertexPos, 1.0);
+
+    mat3 modelMatrixView = mat3(u_modelMatrix * u_viewMatrix);
+    vec3 cameraSpaceNormal = normalize(modelMatrixView * a_fragNormal);
+    vec3 cameraSpaceTangent = normalize(modelMatrixView * a_tangent);
+    vec3 cameraSpaceBitangent = normalize(modelMatrixView * a_bitangent);
+
+    // re-orthogonalize T with respect to N
+    cameraSpaceTangent = normalize(cameraSpaceTangent - dot(cameraSpaceTangent, cameraSpaceNormal) * cameraSpaceNormal);
+
+    // then retrieve perpendicular vector B with the cross product of T and N
+    cameraSpaceBitangent = cross(cameraSpaceNormal, cameraSpaceTangent);
+
+    v_tbn = mat3(cameraSpaceTangent, cameraSpaceBitangent, cameraSpaceNormal);
+}

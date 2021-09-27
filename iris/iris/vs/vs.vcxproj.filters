@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="math">
+      <UniqueIdentifier>{80aa99b1-7fcf-4deb-acb8-b1e0a59a688d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="platform">
+      <UniqueIdentifier>{edb1bb63-3def-4c14-8cbb-878890c18674}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="platform\android">
+      <UniqueIdentifier>{68c2cb97-9d40-426f-a0fc-e718f8a08fa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="platform\win32">
+      <UniqueIdentifier>{5fb48d95-4a7b-429c-9fe3-75b35165b9d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="platform\win32\desktop">
+      <UniqueIdentifier>{f978147a-0650-4f29-9518-6eec1bb3e780}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{b256cdd8-4d2b-422d-836a-10fa253d97bf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\platform\PlatformConfig.h">
+      <Filter>platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\platform\PlatformDefine.h">
+      <Filter>platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\platform\PlatformMacros.h">
+      <Filter>platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\platform\win32\PlatformDefine-win32.h">
+      <Filter>platform\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\platform\android\PlatformDefine-android.h">
+      <Filter>platform\android</Filter>
+    </ClInclude>
+    <ClInclude Include="..\platform\android\GL-android.h">
+      <Filter>platform\android</Filter>
+    </ClInclude>
+    <ClInclude Include="..\platform\win32\GL-win32.h">
+      <Filter>platform\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\platform\win32\StdC-win32.h">
+      <Filter>platform\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\platform\android\StdC-android.h">
+      <Filter>platform\android</Filter>
+    </ClInclude>
+    <ClInclude Include="..\platform\StdC.h">
+      <Filter>platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AppConfig.h" />
+    <ClInclude Include="..\platform\PlatformGL.h">
+      <Filter>platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Iris.h" />
+    <ClInclude Include="..\platform\Logger.h">
+      <Filter>platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\platform\ApplicationProtocol.h">
+      <Filter>platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\platform\Application.h">
+      <Filter>platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\platform\win32\desktop\Application-desktop.h">
+      <Filter>platform\win32\desktop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\platform\android\Application-android.h">
+      <Filter>platform\android</Filter>
+    </ClInclude>
+    <ClInclude Include="..\platform\win32\GLView-win32.h">
+      <Filter>platform\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\platform\GLView.h">
+      <Filter>platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\Camera.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\Color.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\Component.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\Director.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\GameObject.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\Input.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\IStringable.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\Light.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\Material.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\Mesh.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\Object.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\Primitives.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\Rect.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\Renderer.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\Scene.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\Shader.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\Size.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\Texture2D.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\Time.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\Transform.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\Data.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\PooledObject.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\platform\FileUtility.h">
+      <Filter>platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\platform\win32\FileUtility-win32.h">
+      <Filter>platform\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\ShaderCache.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\Bundle3D.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\MeshRenderer.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\RenderTexture.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\Profiler.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\TransformAnchor.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\math\Mathf.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\math\Matrix4x4.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\math\Vector2f.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\math\Vector3f.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\math\Vector4f.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\math\Quaternion.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\PoolManager.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base\CustomObjectPool.h">
+      <Filter>base</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Iris.cpp" />
+    <ClCompile Include="..\platform\Logger.cpp">
+      <Filter>platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\platform\win32\desktop\Application-desktop.cpp">
+      <Filter>platform\win32\desktop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\platform\android\Application-android.cpp">
+      <Filter>platform\android</Filter>
+    </ClCompile>
+    <ClCompile Include="..\platform\win32\GLView-win32.cpp">
+      <Filter>platform\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\platform\GLView.cpp">
+      <Filter>platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\Camera.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\Color.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\Component.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\Director.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\GameObject.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\Input.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\Light.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\Material.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\Mesh.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\Object.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\Primitives.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\Rect.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\Renderer.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\Scene.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\Shader.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\Size.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\Texture2D.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\Time.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\Transform.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\Data.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\PooledObject.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\platform\FileUtility.cpp">
+      <Filter>platform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\platform\win32\FileUtility-win32.cpp">
+      <Filter>platform\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\ShaderCache.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\Bundle3D.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\MeshRenderer.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\RenderTexture.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\Profiler.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\TransformAnchor.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\math\Mathf.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\math\Matrix4x4.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\math\Vector2f.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\math\Vector3f.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\math\Vector4f.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\math\Quaternion.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\PoolManager.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\base\CustomObjectPool.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
