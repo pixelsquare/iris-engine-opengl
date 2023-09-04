@@ -7,6 +7,7 @@
 #include "platform\PlatformDefine.h"
 
 //#include <stdio.h>
+#include <string>
 
 ///	@name namespace macros
 ///	@{

@@ -20,7 +20,6 @@
 
 #include <assert.h>
 #include <vector>
-#include <string>
 
 #if IRIS_DEBUG <= 0
 	#define IRIS_ASSERT(cond)

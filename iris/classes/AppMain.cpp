@@ -27,8 +27,8 @@ bool AppMain::onApplicationInit()
     IRIS_APPLICATION.setTargetFrameRate(60.0f);
 
     //Scene *scene = Scene::create();
-    AppScene* scene = AppScene::create();
-    IRIS_DIRECTOR.setCurrentScene(scene);
+    //AppScene* scene = AppScene::create();
+    //IRIS_DIRECTOR.setCurrentScene(scene);
 
     return true;
 }
